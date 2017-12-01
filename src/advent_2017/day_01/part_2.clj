@@ -15,11 +15,11 @@
   (let [code (->> input str seq)
         len (count code)
         groups (partition (/ len 2) code)]
-  (->> groups
-       (map vec)
-       (apply interleave)
-       (partition 2)
-       (filter (fn [[a b]] (= a b))) )))
+    (->> groups
+         (map vec)
+         (apply interleave)
+         (partition 2)
+         (filter (fn [[a b]] (= a b))) )))
 
 (defn sum-pairs [pairs]
   (->> pairs
