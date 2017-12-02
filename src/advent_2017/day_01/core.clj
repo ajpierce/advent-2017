@@ -13,6 +13,13 @@
              ["1233421" 4]
              ["91212129" 9]])
 
+; Test values (and answers) presented in the problem text
+(def tests2 [["1212" 6]
+             ["1221" 0]
+             ["123425" 4]
+             ["12131415" 4]
+             ["123123" 12]])
+
 (defn split-and-test [calculate [code expected]]
   (let [actual (calculate code)
         match? (= expected actual)]
